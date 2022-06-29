@@ -1,0 +1,110 @@
+.containers{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 1rem;
+}
+.reading-table{
+    width: 100%;
+    padding-top: 3vh;
+
+}
+
+.table-name{
+    font-size: 4vh;
+    text-align: center;
+    background-color: #fcf9f9;
+    border: 0.7vh solid #fcf9f9;
+    border-radius: 3vh;
+    padding: 0.3rem;
+}
+
+table{
+    margin-top: 2vh;
+    text-align: center;
+    width: 100%;
+}
+
+td{
+  padding: 0.3rem; 
+  text-align: left;
+  font-size: 3vh;
+}
+
+label{
+    margin-left: 0px;
+} 
+.cards {
+    border: 0.1rem solid #aaa;
+    border-radius: .5rem;
+    background: #ddd;
+    font-weight: bold;
+    /* margin-left: 5%; */
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+  }
+  .ceb{
+    font-size: 1.5rem;
+    height: 60vh;
+    width: 100%;
+    display: inline-block;
+  }
+  
+  .generator{
+    font-size: 1.5rem;
+    height: 60vh;
+    width: 100%;
+    display: inline-block;
+    margin-top: 5vh;
+  }  
+  .select{
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: sans-serif;
+    display: inline;
+    float: right;
+    margin-top: 5%;
+    margin-left: 2rem;
+  }
+  Tab{
+    float: right;
+  }
+@media (max-width: 630px) {
+    .table-name{
+        font-size: 1.1rem;
+    }
+  }
+
+
+  /* .wrapper {
+    display: grid;
+    grid-template-columns: 50% 50% ;
+    grid-gap: 1rem;
+    background-color: #aaa;
+    padding: 1rem;
+  }
+
+  .card{
+    height: 80vh;
+    display: grid;
+    grid-template-rows: 20% 80%;
+  }
+  .one{
+    height: 100%;
+    background-color: #aaa;
+    
+  }
+  .two{
+    height: 100%;
+    background-color: aqua;
+  }
+  .three{
+    height: 100%;
+  }
+  .oneone{
+    height: 100%;
+    background-color: antiquewhite;
+    width: 100%;
+    grid-column: 1/4;
+  } */

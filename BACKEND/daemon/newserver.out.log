@@ -1,0 +1,54 @@
+server running port 5002
+mysql connected
+{ id: '1' }
+{ id: '18' }
+[
+  {
+    main_reading1: '1',
+    main_reading2: '2',
+    day_main: 'undefined',
+    offPeak_main: '7',
+    peak_main: '6',
+    day_gen: 'undefined',
+    offPeak_gen: '10',
+    peak_gen: '9'
+  }
+]
+[
+  {
+    main_reading1: '0',
+    main_reading2: '0',
+    day_main: '',
+    offPeak_main: '',
+    peak_main: '',
+    day_gen: '',
+    offPeak_gen: '',
+    peak_gen: ''
+  }
+]
+{ id: '1' }
+[
+  {
+    main_reading1: '1',
+    main_reading2: '2',
+    day_main: 'undefined',
+    offPeak_main: '7',
+    peak_main: '6',
+    day_gen: 'undefined',
+    offPeak_gen: '10',
+    peak_gen: '9'
+  }
+]
+{ id: '18' }
+[
+  {
+    main_reading1: '0',
+    main_reading2: '0',
+    day_main: '',
+    offPeak_main: '',
+    peak_main: '',
+    day_gen: '',
+    offPeak_gen: '',
+    peak_gen: ''
+  }
+]

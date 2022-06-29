@@ -1,0 +1,6 @@
+2022-05-23 16:42:34 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 "C:\Users\Shalika Dulaj\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js" --file D:\tabmenu\BACKEND\database.js --scriptoptions= --log "newServer wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2022-05-23 16:42:34 - Started 7580
+2022-05-23 16:42:57 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 "C:\Users\Shalika Dulaj\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js" --file D:\tabmenu\BACKEND\database.js --scriptoptions= --log "newServer wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2022-05-23 16:42:57 - Started 9536
+2022-05-24 10:06:16 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 "C:\Users\Shalika Dulaj\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js" --file D:\tabmenu\BACKEND\database.js --scriptoptions= --log "newServer wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2022-05-24 10:06:16 - Started 11036
