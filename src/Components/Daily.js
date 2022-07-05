@@ -605,20 +605,20 @@ const Daily = (props) => {
                 peak = (machine.offPeak_gen - machine.peak_gen);
               }
                     return(<>
-                    <tr>
-                        <td>Reading</td>
-                        <td>{genReading}</td>
-                    </tr>
-                    <tr>
-                        <td>Off Peak</td>
-                        <td key={machine.id}>{machine.offPeak_gen}</td>
-                    </tr><tr>
-                        <td>Day</td>
-                        <td key={machine.id}>{machine.day_gen}</td>
-                    </tr><tr>
-                        <td>Peak</td>
-                        <td key={machine.id}>{machine.peak_main}</td>
-                    </tr></>)
+                  <tr>
+                    <td>Reading</td>
+                    <td>{mainReading}</td>
+                  </tr>
+                  <tr>
+                    <td>Off Peak</td>
+                    <td key={machine.id}>{offPeak}</td>
+                  </tr><tr>
+                    <td>Day</td>
+                    <td key={machine.id}>{day}</td>
+                  </tr><tr>
+                    <td>Peak</td>
+                    <td key={machine.id}>{peak}</td>
+                  </tr></>)
                 })}
                 
             </tbody>
@@ -656,7 +656,7 @@ const Daily = (props) => {
                 {urlG.map(option => {
                     return(<>
                     <tr>
-                        <td className='mainReading'>Reading</td>
+                        <td className='genReading'>Reading</td>
                         <td></td>
                     </tr>
                     <tr>
