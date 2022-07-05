@@ -2,34 +2,10 @@
 
 ## Getting started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-From your command line, first clone Dev Portfolio:
-
-```bash
-# Clone the repository
-https://github.com/Poojani93/tabmenu.git
-
-# Move into the repository
-cd tabmenu
-
-# Remove the current origin repository
-git remote remove origin
-```
-
-After that, you can install the dependencies using npm.
-
-Using NPM: Simply run the below commands.
-
-```bash
-# Install dependencies
-$ npm i
-```
-
 ### Run node backend
 
 Restart nodeServer in Services on local machine.
-(This MUST be done whenever there is a change in the file 'database.js')
+(This MUST be done whenever there is a change in the file 'database.js' inside BACKEND folder)
 
 ### Run react frontend
 
@@ -40,18 +16,24 @@ $ npm start
 
 #### Change backend running port
 
-Go to 'database.js', scroll down and at the end of the file change 'PORT' variable to a desired port. Current port is 5005.
+Go to 'database.js' inside BACKEND folder, scroll down to the bottom of the file and change 'port' variable to a desired port. Current port is 5005.
+
 ```bash
 const port = process.env.PORT || 5005;
 ```
 
 #### Change frontend running port
-Go to '.env' file and change the port to a desired port.
+Go to '.env' file and change the port to a desired port. Current port is 3005.
+
+```bash
+PORT=3005;
+```
 
 ### Notes
-*Front end files are in src folder.
 
-*Backend files are in BACKEND folder.
+*All front end files are in src folder.
+
+*All backend files are in BACKEND folder.
 
 *API -> database.js
 
@@ -59,29 +41,34 @@ Go to '.env' file and change the port to a desired port.
 
 *If the current location is changed. Do the following steps.
 
-    Open project in Visual Studio Code
+#### Adding new windows server
 
-    Open BACKEND folder
+Open project in Visual Studio Code
 
-    Delete deamon folder
+Open BACKEND folder
 
-    Write click on database.js file and Copy path
+Delete deamon folder
 
-    Open nodeService.js file
+Write click on database.js file and Copy path
 
-    Paste it infront of 'script'
+Open nodeService.js file
 
-    Change 'name'
+Paste it infront of 'script'. Change '\' to '\\' in path.
 
-    Open terminal
+Change 'name'
 
-    Go to BACKEND folder and run the following command
+Open terminal
 
-    ```bash
-    node ./nodeService.js
-    ```
-    
-    Open Windows services and start the new server
+Go to BACKEND folder and run the following command
+
+```bash
+node ./nodeService.js
+```
+Make sure a deamon folder is generated inside BACKEND folder
+
+Open Windows services and start the new server
+
+
 
 
 
