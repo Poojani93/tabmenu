@@ -50,22 +50,37 @@ Go to '.env' file and change the port to a desired port.
 
 ### Notes
 *Front end files are in src folder.
+
 *Backend files are in BACKEND folder.
+
 *API -> database.js
+
 **Do not change project location in the local machine as the windows service(nodeServer) is addressing the current location.
+
 *If the current location is changed. Do the following steps.
+
     Open project in Visual Studio Code
+
     Open BACKEND folder
+
     Delete deamon folder
+
     Write click on database.js file and Copy path
+
     Open nodeService.js file
+
     Paste it infront of 'script'
+
     Change 'name'
+
     Open terminal
+
     Go to BACKEND folder and run the following command
+
     ```bash
     node ./nodeService.js
     ```
+    
     Open Windows services and start the new server
 
 
