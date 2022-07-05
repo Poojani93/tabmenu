@@ -13,7 +13,9 @@ import Months from './Months';
 import '../App.css'
 
 const Daily = (props) => {
-    const [getenergy_daily, setBranch] = useState([]);
+
+    const [energyDaily, setEnergyDaily] = useState([]);
+
     const [key1, setKey1] = useState('home');
     const [key2, setKey2] = useState('home');
     const [urlM, setUrlM] = useState([]);
@@ -24,7 +26,7 @@ const Daily = (props) => {
         axios.get(section)
         .then(res => {
             console.log(res)
-            setBranch(res.data)
+            setEnergyDaily(res.data)
             
         })
         .catch(err => {
@@ -486,7 +488,7 @@ const Daily = (props) => {
         {/* <Daily /> */}
         <table>
           <tbody>
-            {getenergy_daily.map(machine => {
+            {energyDaily.map(machine => {
               if (machine.offPeak_main > machine.day_main) {
                 offPeak = "Null";
               } else {
@@ -588,7 +590,7 @@ const Daily = (props) => {
         {/* <Daily /> */}
         <table>
           <tbody>
-            {getenergy_daily.map(machine => {
+            {energyDaily.map(machine => {
               if (machine.offPeak_gen > machine.day_gen) {
                 offPeak = "Null";
               } else {
