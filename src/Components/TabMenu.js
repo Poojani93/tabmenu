@@ -6,7 +6,6 @@ import './TabMenu.css'
 import 'bootstrap/dist/css/bootstrap.css';
 import Daily from './Daily';
 // import Monthly from './Monthly';
-import Navbar from './Navbar';
 
 const TabMenu = () => {
 

@@ -48,7 +48,7 @@ const Daily = (props) => {
 
     let topic, mainReading, genReading, section, january, february, march, april, may, june, july, august, september, october, november, december;
 
-    var client  = mqtt.connect('ws://192.168.8.110:8083/mqtt');
+    var client  = mqtt.connect('ws://10.50.8.2:8083/mqtt');
 
     client.subscribe("data/power/powerdash/9999");
     
@@ -69,7 +69,7 @@ const Daily = (props) => {
         switch (props.id) {
             case "powerReading0":
                 mainReading = mesg.mainPowerReading;
-                section = "http://localhost:5002/daily/1";
+                section = "http://localhost:5002/daily/18";
               break;
             case "powerReading1":
               mainReading = mesg.powerReading1;
@@ -142,7 +142,7 @@ const Daily = (props) => {
         switch (props.id) {
             case "powerReading0":
               genReading = mesg.genPowerReading;
-              section = "http://localhost:5002/daily/1"
+              section = "http://localhost:5002/daily/18"
             break;
             case "powerReading1":
               genReading = mesg.powerReading1;
@@ -214,244 +214,258 @@ const Daily = (props) => {
     }
 
     switch (section) {
-      case "powerReading0":
-        january = "http://localhost:5002/section1/1";
-        february = "http://localhost:5002/section1/2";
-        march = "http://localhost:5002/section1/3";
-        april = "http://localhost:5002/section1/4";
-        may = "http://localhost:5002/section1/5";
-        june = "http://localhost:5002/section1/6";
-        july = "http://localhost:5002/section1/7";
-        august = "http://localhost:5002/section1/8";
-        september = "http://localhost:5002/section1/9";
-        october = "http://localhost:5002/section1/10";
-        november = "http://localhost:5002/section1/11";
-        december = "http://localhost:5002/section1/12"
-      break;
       case "http://localhost:5002/daily/1":
-        january = "http://localhost:5002/section1/1";
-        february = "http://localhost:5002/section1/2";
-        march = "http://localhost:5002/section1/3";
-        april = "http://localhost:5002/section1/4";
-        may = "http://localhost:5002/section1/5";
-        june = "http://localhost:5002/section1/6";
-        july = "http://localhost:5002/section1/7";
-        august = "http://localhost:5002/section1/8";
-        september = "http://localhost:5002/section1/9";
-        october = "http://localhost:5002/section1/10";
-        november = "http://localhost:5002/section1/11";
-        december = "http://localhost:5002/section1/12"
+        january = "http://localhost:5002/january/1";
+        february = "http://localhost:5002/february/1";
+        march = "http://localhost:5002/march/1";
+        april = "http://localhost:5002/april/1";
+        may = "http://localhost:5002/may/1";
+        june = "http://localhost:5002/june/1";
+        july = "http://localhost:5002/july/1";
+        august = "http://localhost:5002/august/1";
+        september = "http://localhost:5002/september/1";
+        october = "http://localhost:5002/october/1";
+        november = "http://localhost:5002/november/1";
+        december = "http://localhost:5002/december/1"
         break;
       case "http://localhost:5002/daily/2":
-        january = "http://localhost:5002/section2/1";
-        february = "http://localhost:5002/section2/2";
-        march = "http://localhost:5002/section2/3"
-        april = "http://localhost:5002/section2/4";
-        may = "http://localhost:5002/section2/5";
-        june = "http://localhost:5002/section2/6";
-        july = "http://localhost:5002/section2/7";
-        august = "http://localhost:5002/section2/8";
-        september = "http://localhost:5002/section2/9";
-        october = "http://localhost:5002/section2/10";
-        november = "http://localhost:5002/section2/11";
-        december = "http://localhost:5002/section2/12"
+        january = "http://localhost:5002/january/2";
+        february = "http://localhost:5002/february/2";
+        march = "http://localhost:5002/march/2"
+        april = "http://localhost:5002/april/2";
+        may = "http://localhost:5002/may/2";
+        june = "http://localhost:5002/june/2";
+        july = "http://localhost:5002/july/2";
+        august = "http://localhost:5002/august/2";
+        september = "http://localhost:5002/september/2";
+        october = "http://localhost:5002/october/2";
+        november = "http://localhost:5002/november/2";
+        december = "http://localhost:5002/december/2"
         break;
       case "http://localhost:5002/daily/3":
-        january = "http://localhost:5002/section3/1";
-        february = "http://localhost:5002/section3/2";
-        march = "http://localhost:5002/section3/3"
-        april = "http://localhost:5002/section3/4";
-        may = "http://localhost:5002/section3/5";
-        june = "http://localhost:5002/section3/6";
-        july = "http://localhost:5002/section3/7";
-        august = "http://localhost:5002/section3/8";
-        september = "http://localhost:5002/section3/9";
-        october = "http://localhost:5002/section3/10";
-        november = "http://localhost:5002/section3/11";
-        december = "http://localhost:5002/section3/12"
+        january = "http://localhost:5002/january/3";
+        february = "http://localhost:5002/february/3";
+        march = "http://localhost:5002/march/3"
+        april = "http://localhost:5002/april/3";
+        may = "http://localhost:5002/may/3";
+        june = "http://localhost:5002/june/3";
+        july = "http://localhost:5002/july/3";
+        august = "http://localhost:5002/august/3";
+        september = "http://localhost:5002/september/3";
+        october = "http://localhost:5002/october/3";
+        november = "http://localhost:5002/november/3";
+        december = "http://localhost:5002/december/3"
         break;
       case "http://localhost:5002/daily/4":
-        january = "http://localhost:5002/section4/1";
-        february = "http://localhost:5002/section4/2";
-        march = "http://localhost:5002/section4/3"
-        april = "http://localhost:5002/section4/4";
-        may = "http://localhost:5002/section4/5";
-        june = "http://localhost:5002/section4/6";
-        july = "http://localhost:5002/section4/7";
-        august = "http://localhost:5002/section4/8";
-        september = "http://localhost:5002/section4/9";
-        october = "http://localhost:5002/section4/10";
-        november = "http://localhost:5002/section4/11";
-        december = "http://localhost:5002/section4/12"
+        january = "http://localhost:5002/january/4";
+        february = "http://localhost:5002/february/4";
+        march = "http://localhost:5002/march/4"
+        april = "http://localhost:5002/april/4";
+        may = "http://localhost:5002/may/4";
+        june = "http://localhost:5002/june/4";
+        july = "http://localhost:5002/july/4";
+        august = "http://localhost:5002/august/4";
+        september = "http://localhost:5002/september/4";
+        october = "http://localhost:5002/october/4";
+        november = "http://localhost:5002/november/4";
+        december = "http://localhost:5002/december/4"
         break;
       case "http://localhost:5002/daily/5":
-        january = "http://localhost:5002/section5/1";
-        february = "http://localhost:5002/section5/2";
-        march = "http://localhost:5002/section5/3";
-        april = "http://localhost:5002/section5/4";
-        may = "http://localhost:5002/section5/5";
-        june = "http://localhost:5002/section5/6";
-        july = "http://localhost:5002/section5/7";
-        august = "http://localhost:5002/section5/8";
-        september = "http://localhost:5002/section5/9";
-        october = "http://localhost:5002/section5/10";
-        november = "http://localhost:5002/section5/11";
-        december = "http://localhost:5002/section5/12"
+        january = "http://localhost:5002/january/5";
+        february = "http://localhost:5002/february/5";
+        march = "http://localhost:5002/march/5"
+        april = "http://localhost:5002/april/5";
+        may = "http://localhost:5002/may/5";
+        june = "http://localhost:5002/june/5";
+        july = "http://localhost:5002/july/5";
+        august = "http://localhost:5002/august/5";
+        september = "http://localhost:5002/september/5";
+        october = "http://localhost:5002/october/5";
+        november = "http://localhost:5002/november/5";
+        december = "http://localhost:5002/december/5"
         break;
       case "http://localhost:5002/daily/6":
-        january = "http://localhost:5002/section6/1";
-        february = "http://localhost:5002/section6/2";
-        march = "http://localhost:5002/section6/3";
-        april = "http://localhost:5002/section6/4";
-        may = "http://localhost:5002/section6/5";
-        june = "http://localhost:5002/section6/6";
-        july = "http://localhost:5002/section6/7";
-        august = "http://localhost:5002/section6/8";
-        september = "http://localhost:5002/section6/9";
-        october = "http://localhost:5002/section6/10";
-        november = "http://localhost:5002/section6/11";
-        december = "http://localhost:5002/section6/12"        
+        january = "http://localhost:5002/january/6";
+        february = "http://localhost:5002/february/6";
+        march = "http://localhost:5002/march/6"
+        april = "http://localhost:5002/april/6";
+        may = "http://localhost:5002/may/6";
+        june = "http://localhost:5002/june/6";
+        july = "http://localhost:5002/july/6";
+        august = "http://localhost:5002/august/6";
+        september = "http://localhost:5002/september/6";
+        october = "http://localhost:5002/october/6";
+        november = "http://localhost:5002/november/6";
+        december = "http://localhost:5002/december/6"       
         break;
       case "http://localhost:5002/daily/7":
-        january = "http://localhost:5002/section7/1";
-        february = "http://localhost:5002/section7/2";
-        march = "http://localhost:5002/section7/3";
-        april = "http://localhost:5002/section7/4";
-        may = "http://localhost:5002/section7/5";
-        june = "http://localhost:5002/section7/6";
-        july = "http://localhost:5002/section7/7";
-        august = "http://localhost:5002/section7/8";
-        september = "http://localhost:5002/section7/9";
-        october = "http://localhost:5002/section7/10";
-        november = "http://localhost:5002/section7/11";
-        december = "http://localhost:5002/section7/12"        
+        january = "http://localhost:5002/january/7";
+        february = "http://localhost:5002/february/7";
+        march = "http://localhost:5002/march/7"
+        april = "http://localhost:5002/april/7";
+        may = "http://localhost:5002/may/7";
+        june = "http://localhost:5002/june/7";
+        july = "http://localhost:5002/july/7";
+        august = "http://localhost:5002/august/7";
+        september = "http://localhost:5002/september/7";
+        october = "http://localhost:5002/october/7";
+        november = "http://localhost:5002/november/7";
+        december = "http://localhost:5002/december/7"     
         break;
       case "http://localhost:5002/daily/8":
-        january = "http://localhost:5002/section8/1";
-        february = "http://localhost:5002/section8/2";
-        march = "http://localhost:5002/section8/3";
-        april = "http://localhost:5002/section8/4";
-        may = "http://localhost:5002/section8/5";
-        june = "http://localhost:5002/section8/6";
-        july = "http://localhost:5002/section8/7";
-        august = "http://localhost:5002/section8/8";
-        september = "http://localhost:5002/section8/9";
-        october = "http://localhost:5002/section8/10";
-        november = "http://localhost:5002/section8/11";
-        december = "http://localhost:5002/section8/12"
+        january = "http://localhost:5002/january/8";
+        february = "http://localhost:5002/february/8";
+        march = "http://localhost:5002/march/8"
+        april = "http://localhost:5002/april/8";
+        may = "http://localhost:5002/may/8";
+        june = "http://localhost:5002/june/8";
+        july = "http://localhost:5002/july/8";
+        august = "http://localhost:5002/august/8";
+        september = "http://localhost:5002/september/8";
+        october = "http://localhost:5002/october/8";
+        november = "http://localhost:5002/november/8";
+        december = "http://localhost:5002/december/8"
         break;
       case "http://localhost:5002/daily/9":
-        january = "http://localhost:5002/section9/1";
-        february = "http://localhost:5002/section9/2";
-        march = "http://localhost:5002/section9/3";
-        april = "http://localhost:5002/section9/4";
-        may = "http://localhost:5002/section9/5";
-        june = "http://localhost:5002/section9/6";
-        july = "http://localhost:5002/section9/7";
-        august = "http://localhost:5002/section9/8";
-        september = "http://localhost:5002/section9/9";
-        october = "http://localhost:5002/section9/10";
-        november = "http://localhost:5002/section9/11";
-        december = "http://localhost:5002/section9/12"        
+        january = "http://localhost:5002/january/9";
+        february = "http://localhost:5002/february/9";
+        march = "http://localhost:5002/march/9"
+        april = "http://localhost:5002/april/9";
+        may = "http://localhost:5002/may/9";
+        june = "http://localhost:5002/june/9";
+        july = "http://localhost:5002/july/9";
+        august = "http://localhost:5002/august/9";
+        september = "http://localhost:5002/september/9";
+        october = "http://localhost:5002/october/9";
+        november = "http://localhost:5002/november/9";
+        december = "http://localhost:5002/december/9"        
         break;
       case "http://localhost:5002/daily/10":
-        january = "http://localhost:5002/section10/1";
-        february = "http://localhost:5002/section10/2";
-        march = "http://localhost:5002/section10/3";
-        april = "http://localhost:5002/section10/4";
-        may = "http://localhost:5002/section10/5";
-        june = "http://localhost:5002/section10/6";
-        july = "http://localhost:5002/section10/7";
-        august = "http://localhost:5002/section10/8";
-        september = "http://localhost:5002/section10/9";
-        october = "http://localhost:5002/section10/10";
-        november = "http://localhost:5002/section10/11";
-        december = "http://localhost:5002/section10/12"
+        january = "http://localhost:5002/january/10";
+        february = "http://localhost:5002/february/10";
+        march = "http://localhost:5002/march/10"
+        april = "http://localhost:5002/april/10";
+        may = "http://localhost:5002/may/10";
+        june = "http://localhost:5002/june/10";
+        july = "http://localhost:5002/july/10";
+        august = "http://localhost:5002/august/10";
+        september = "http://localhost:5002/september/10";
+        october = "http://localhost:5002/october/10";
+        november = "http://localhost:5002/november/10";
+        december = "http://localhost:5002/december/10"
         break;
       case "http://localhost:5002/daily/11":
-        january = "http://localhost:5002/section11/1";
-        february = "http://localhost:5002/section11/2";
-        march = "http://localhost:5002/section11/3";
-        april = "http://localhost:5002/section11/4";
-        may = "http://localhost:5002/section11/5";
-        june = "http://localhost:5002/section11/6";
-        july = "http://localhost:5002/section11/7";
-        august = "http://localhost:5002/section11/8";
-        september = "http://localhost:5002/section11/9";
-        october = "http://localhost:5002/section11/10";
-        november = "http://localhost:5002/section11/11";
-        december = "http://localhost:5002/section11/12"
+        january = "http://localhost:5002/january/11";
+        february = "http://localhost:5002/february/11";
+        march = "http://localhost:5002/march/11"
+        april = "http://localhost:5002/april/11";
+        may = "http://localhost:5002/may/11";
+        june = "http://localhost:5002/june/11";
+        july = "http://localhost:5002/july/11";
+        august = "http://localhost:5002/august/11";
+        september = "http://localhost:5002/september/11";
+        october = "http://localhost:5002/october/11";
+        november = "http://localhost:5002/november/11";
+        december = "http://localhost:5002/december/11"
         break;
       case "http://localhost:5002/daily/12":
-        january = "http://localhost:5002/section12/1";
-        february = "http://localhost:5002/section12/2";
-        march = "http://localhost:5002/section12/3";
-        april = "http://localhost:5002/section12/4";
-        may = "http://localhost:5002/section12/5";
-        june = "http://localhost:5002/section12/6";
-        july = "http://localhost:5002/section12/7";
-        august = "http://localhost:5002/section12/8";
-        september = "http://localhost:5002/section12/9";
-        october = "http://localhost:5002/section12/10";
-        november = "http://localhost:5002/section12/11";
-        december = "http://localhost:5002/section12/12"
+        january = "http://localhost:5002/january/12";
+        february = "http://localhost:5002/february/12";
+        march = "http://localhost:5002/march/12"
+        april = "http://localhost:5002/april/12";
+        may = "http://localhost:5002/may/12";
+        june = "http://localhost:5002/june/12";
+        july = "http://localhost:5002/july/12";
+        august = "http://localhost:5002/august/12";
+        september = "http://localhost:5002/september/12";
+        october = "http://localhost:5002/october/12";
+        november = "http://localhost:5002/november/12";
+        december = "http://localhost:5002/december/12"
         break;
       case "http://localhost:5002/daily/13":
-        january = "http://localhost:5002/section13/1";
-        february = "http://localhost:5002/section13/2";
-        march = "http://localhost:5002/section13/3";
-        april = "http://localhost:5002/section13/4";
-        may = "http://localhost:5002/section13/5";
-        june = "http://localhost:5002/section13/6";
-        july = "http://localhost:5002/section13/7";
-        august = "http://localhost:5002/section13/8";
-        september = "http://localhost:5002/section13/9";
-        october = "http://localhost:5002/section13/10";
-        november = "http://localhost:5002/section13/11";
-        december = "http://localhost:5002/section13/12"
+        january = "http://localhost:5002/january/13";
+        february = "http://localhost:5002/february/13";
+        march = "http://localhost:5002/march/13"
+        april = "http://localhost:5002/april/13";
+        may = "http://localhost:5002/may/13";
+        june = "http://localhost:5002/june/13";
+        july = "http://localhost:5002/july/13";
+        august = "http://localhost:5002/august/13";
+        september = "http://localhost:5002/september/13";
+        october = "http://localhost:5002/october/13";
+        november = "http://localhost:5002/november/13";
+        december = "http://localhost:5002/december/13"
         break;
       case "http://localhost:5002/daily/14":
-        january = "http://localhost:5002/section14/1";
-        february = "http://localhost:5002/section14/2";
-        march = "http://localhost:5002/section14/3";
-        april = "http://localhost:5002/section14/4";
-        may = "http://localhost:5002/section14/5";
-        june = "http://localhost:5002/section14/6";
-        july = "http://localhost:5002/section14/7";
-        august = "http://localhost:5002/section14/8";
-        september = "http://localhost:5002/section14/9";
-        october = "http://localhost:5002/section14/10";
-        november = "http://localhost:5002/section14/11";
-        december = "http://localhost:5002/section14/12"
+        january = "http://localhost:5002/january/14";
+        february = "http://localhost:5002/february/14";
+        march = "http://localhost:5002/march/14"
+        april = "http://localhost:5002/april/14";
+        may = "http://localhost:5002/may/14";
+        june = "http://localhost:5002/june/14";
+        july = "http://localhost:5002/july/14";
+        august = "http://localhost:5002/august/14";
+        september = "http://localhost:5002/september/14";
+        october = "http://localhost:5002/october/14";
+        november = "http://localhost:5002/november/14";
+        december = "http://localhost:5002/december/14"
         break;
       case "http://localhost:5002/daily/15":
-        january = "http://localhost:5002/section15/1";
-        february = "http://localhost:5002/section15/2";
-        march = "http://localhost:5002/section15/3";
-        april = "http://localhost:5002/section15/4";
-        may = "http://localhost:5002/section15/5";
-        june = "http://localhost:5002/section15/6";
-        july = "http://localhost:5002/section15/7";
-        august = "http://localhost:5002/section15/8";
-        september = "http://localhost:5002/section15/9";
-        october = "http://localhost:5002/section15/10";
-        november = "http://localhost:5002/section15/11";
-        december = "http://localhost:5002/section15/12"
+        january = "http://localhost:5002/january/15";
+        february = "http://localhost:5002/february/15";
+        march = "http://localhost:5002/march/15"
+        april = "http://localhost:5002/april/15";
+        may = "http://localhost:5002/may/15";
+        june = "http://localhost:5002/june/15";
+        july = "http://localhost:5002/july/15";
+        august = "http://localhost:5002/august/15";
+        september = "http://localhost:5002/september/15";
+        october = "http://localhost:5002/october/15";
+        november = "http://localhost:5002/november/15";
+        december = "http://localhost:5002/december/15"
         break;
       case "http://localhost:5002/daily/16":
-        january = "http://localhost:5002/section16/1";
-        february = "http://localhost:5002/section16/2";
-        march = "http://localhost:5002/section16/3";
-        april = "http://localhost:5002/section16/4";
-        may = "http://localhost:5002/section16/5";
-        june = "http://localhost:5002/section16/6";
-        july = "http://localhost:5002/section16/7";
-        august = "http://localhost:5002/section16/8";
-        september = "http://localhost:5002/section16/9";
-        october = "http://localhost:5002/section16/10";
-        november = "http://localhost:5002/section16/11";
-        december = "http://localhost:5002/section16/12"
+        january = "http://localhost:5002/january/16";
+        february = "http://localhost:5002/february/16";
+        march = "http://localhost:5002/march/16"
+        april = "http://localhost:5002/april/16";
+        may = "http://localhost:5002/may/16";
+        june = "http://localhost:5002/june/16";
+        july = "http://localhost:5002/july/16";
+        august = "http://localhost:5002/august/16";
+        september = "http://localhost:5002/september/16";
+        october = "http://localhost:5002/october/16";
+        november = "http://localhost:5002/november/16";
+        december = "http://localhost:5002/december/16"
         break;
+        case "http://localhost:5002/daily/17":
+          january = "http://localhost:5002/january/17";
+          february = "http://localhost:5002/february/17";
+          march = "http://localhost:5002/march/17"
+          april = "http://localhost:5002/april/17";
+          may = "http://localhost:5002/may/17";
+          june = "http://localhost:5002/june/17";
+          july = "http://localhost:5002/july/17";
+          august = "http://localhost:5002/august/17";
+          september = "http://localhost:5002/september/17";
+          october = "http://localhost:5002/october/17";
+          november = "http://localhost:5002/november/17";
+          december = "http://localhost:5002/december/17"
+          break;
+          case "http://localhost:5002/daily/18":
+            january = "http://localhost:5002/january/18";
+            february = "http://localhost:5002/february/18";
+            march = "http://localhost:5002/march/18"
+            april = "http://localhost:5002/april/18";
+            may = "http://localhost:5002/may/18";
+            june = "http://localhost:5002/june/18";
+            july = "http://localhost:5002/july/18";
+            august = "http://localhost:5002/august/18";
+            september = "http://localhost:5002/september/18";
+            october = "http://localhost:5002/october/18";
+            november = "http://localhost:5002/november/18";
+            december = "http://localhost:5002/december/18"
+            break;
       default:
         january = "0";
     }
@@ -460,7 +474,7 @@ const Daily = (props) => {
     
   return (
     <div className="containers">
-      <div className="cards generator" style={{textAlign:"left"}}>
+      <div className="cards ceb" style={{textAlign:"left"}}>
         <h2>Main</h2>
       <Tabs
       id="controlled-tab-example"
@@ -490,7 +504,7 @@ const Daily = (props) => {
               }
                 return(<>
                   <tr>
-                    <td>Main Reading</td>
+                    <td>Reading</td>
                     <td>{mainReading}</td>
                   </tr>
                   <tr>
@@ -540,7 +554,7 @@ const Daily = (props) => {
                 {urlM.map(option => {
                     return(<>
                     <tr>
-                        <td className='mainReading'>mainReading</td>
+                        <td className='mainReading'>Reading</td>
                         <td></td>
                     </tr>
                     <tr>
@@ -592,7 +606,7 @@ const Daily = (props) => {
               }
                     return(<>
                     <tr>
-                        <td>Generator Reading</td>
+                        <td>Reading</td>
                         <td>{genReading}</td>
                     </tr>
                     <tr>
@@ -642,7 +656,7 @@ const Daily = (props) => {
                 {urlG.map(option => {
                     return(<>
                     <tr>
-                        <td className='mainReading'>mainReading</td>
+                        <td className='mainReading'>Reading</td>
                         <td></td>
                     </tr>
                     <tr>
@@ -664,219 +678,6 @@ const Daily = (props) => {
 
         </div>
     </div>
-    // <div className='wrapper'>
-    //   <div className='cards'>
-    //     <div className='one'>
-    //       <h2>Main</h2>
-    //     </div>
-    //     <div className='three'></div>
-    //     <div className='oneone'>
-    //     <Tabs
-    //   id="controlled-tab-example"
-    //   activeKey={key1}
-    //   onSelect={(k1) => setKey1(k1)}
-    //   className="mb-3"
-    // >
-    //    <Tab eventKey="home" title="Daily">
-    //     {/* <Daily /> */}
-    //      <table>
-    //        <tbody>
-    //          {getenergy_daily.map(machine => {
-    //           if (machine.offPeak_main > machine.day_main) {
-    //             offPeak = "Null";
-    //           } else {
-    //             offPeak = (machine.day_main - machine.offPeak_main - (machine.day_gen - machine.offPeak_gen));
-    //           }
-    //           if (machine.day_main > machine.peak_main) {
-    //             day = "Null";
-    //           } else {
-    //             day = (machine.peak_main - machine.day_main - (machine.offPeak_gen - machine.day_gen));
-    //           }
-    //           if (machine.peak_main > machine.offPeak_main) {
-    //             peak = "Null";
-    //           } else {
-    //             peak = (machine.offPeak_main - machine.peak_main - (machine.offPeak_gen - machine.offPeak_gen));
-    //           }
-    //             return(<>
-    //               <tr>
-    //                 <td>Main Reading</td>
-    //                 <td>{mainReading}</td>
-    //               </tr>
-    //               <tr>
-    //                 <td>Off Peak</td>
-    //                 <td key={machine.id}>{offPeak}</td>
-    //               </tr><tr>
-    //                 <td>Day</td>
-    //                 <td key={machine.id}>{day}</td>
-    //               </tr><tr>
-    //                 <td>Peak</td>
-    //                 <td key={machine.id}>{peak}</td>
-    //               </tr></>)
-    //             })}
-                
-    //         </tbody>
-    //       </table>
-    //   </Tab>
-    //    <Tab eventKey="profile" title="Monthly">
-    //      {/* <Monthly /> */}
-    //      <select className='select' style={{display: "inline"}} onChange={e => {
-    //                 axios.get(e.target.value)
-    //                 .then(res => {
-    //                     console.log(res)
-    //                     setUrlM(res.data)
-                        
-    //                 })
-    //                 .catch(err => {
-    //                     console.log(err)
-    //                 })
-    //         }}>
-    //         <option></option>
-    //         <option value={january}>January</option>
-    //         <option value={february}>February</option>
-    //         <option value={march}>March</option>
-    //         <option value={april}>April</option>
-    //         <option value={may}>May</option>
-    //         <option value={june}>June</option>
-    //         <option value={july}>July</option>
-    //         <option value={august}>August</option>
-    //         <option value={september}>September</option>
-    //         <option value={october}>October</option>
-    //         <option value={november}>November</option>
-    //         <option value={december}>December</option>
-    //     </select>
-    //     <table>
-    //             <tbody>
-    //             {urlM.map(option => {
-    //                 return(<>
-    //                 <tr>
-    //                     <td className='mainReading'>mainReading</td>
-    //                     <td></td>
-    //                 </tr>
-    //                 <tr>
-    //                     <td>Off Peak</td>
-    //                     <td key={option.id}>{option.offPeak_main}</td>
-    //                 </tr><tr>
-    //                     <td>Day</td>
-    //                     <td key={option.id}>{option.day_main}</td>
-    //                 </tr><tr>
-    //                     <td>Peak</td>
-    //                     <td key={option.id}>{option.peak_main}</td>
-    //                 </tr></>)
-    //             })}
-                
-    //         </tbody>
-    //         </table>
-    //   </Tab>
-    // </Tabs>
-    //     </div>
-    //   </div>
-    //   <div className='cards'>
-    //   <div className='one'>
-    //     <h2>Generator</h2>
-    //   </div>
-    //     <div className='two'></div>
-    //     <div className='three'></div>
-    //     <div className='oneone'>
-    //  <Tabs
-    //   id="controlled-tab-example"
-    //   activeKey={key2}
-    //   onSelect={(k2) => setKey2(k2)}
-    //   className="mb-3"
-    // >
-    //   <Tab eventKey="home" title="Daily">
-    //      {/* <Daily /> */}
-    //     <table>
-    //       <tbody>
-    //         {getenergy_daily.map(machine => {
-    //           if (machine.offPeak_gen > machine.day_gen) {
-    //             offPeak = "Null";
-    //           } else {
-    //             offPeak = (machine.day_gen - machine.offPeak_gen);
-    //           }
-    //           if (machine.day_gen > machine.peak_gen) {
-    //             day = "Null";
-    //           } else {
-    //             day = (machine.peak_gen - machine.day_gen);
-    //           }
-    //           if (machine.peak_gen > machine.offPeak_gen) {
-    //             peak = "Null";
-    //           } else {
-    //             peak = (machine.offPeak_gen - machine.peak_gen);
-    //           }
-    //                 return(<>
-    //                 <tr>
-    //                     <td>Generator Reading</td>
-    //                     <td>{genReading}</td>
-    //                 </tr>
-    //                 <tr>
-    //                     <td>Off Peak</td>
-    //                     <td key={machine.id}>{machine.offPeak_gen}</td>
-    //                 </tr><tr>
-    //                     <td>Day</td>
-    //                     <td key={machine.id}>{machine.day_gen}</td>
-    //                 </tr><tr>
-    //                     <td>Peak</td>
-    //                     <td key={machine.id}>{machine.peak_main}</td>
-    //                 </tr></>)
-    //             })}
-                
-    //         </tbody>
-    //         </table>
-    //   </Tab>
-    //   <Tab eventKey="profile" title="Monthly">
-    //      {/* <Monthly /> */}
-    //     <select className='select' onChange={e => {
-    //                 axios.get(e.target.value)
-    //                 .then(res => {
-    //                     console.log(res)
-    //                     setUrlG(res.data)
-                        
-    //                 })
-    //                 .catch(err => {
-    //                     console.log(err)
-    //                 })
-    //         }}>
-    //         <option></option>
-    //         <option value={january}>January</option>
-    //         <option value={february}>February</option>
-    //         <option value={march}>March</option>
-    //         <option value={april}>April</option>
-    //         <option value={may}>May</option>
-    //         <option value={june}>June</option>
-    //         <option value={july}>July</option>
-    //         <option value={august}>August</option>
-    //         <option value={september}>September</option>
-    //         <option value={october}>October</option>
-    //         <option value={november}>November</option>
-    //         <option value={december}>December</option>
-    //     </select>
-    //     <table>
-    //             <tbody>
-    //             {urlG.map(option => {
-    //                 return(<>
-    //                 <tr>
-    //                     <td className='mainReading'>mainReading</td>
-    //                     <td></td>
-    //                 </tr>
-    //                 <tr>
-    //                     <td>Off Peak</td>
-    //                     <td key={option.id}>{option.offPeak_gen}</td>
-    //                 </tr><tr>
-    //                     <td>Day</td>
-    //                     <td key={option.id}>{option.day_gen}</td>
-    //                 </tr><tr>
-    //                     <td>Peak</td>
-    //                     <td key={option.id}>{option.peak_gen}</td>
-    //                 </tr></>)
-    //             })}
-                
-    //         </tbody>
-    //         </table>
-    //   </Tab>
-    // </Tabs>
-    //     </div>
-    //   </div>
-    // </div>
   )
 }
 

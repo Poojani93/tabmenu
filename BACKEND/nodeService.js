@@ -4,7 +4,7 @@ var Service = require('node-windows').Service;
 var svc = new Service({
   name:'newServer',
   description: 'The nodejs.org example web server.',
-  script: 'D:\\tabmenu\\BACKEND\\database.js',
+  script: 'E:\Atlas\tabmenu\BACKEND\database.js',
   nodeOptions: [
     '--harmony',
     '--max_old_space_size=4096'

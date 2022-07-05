@@ -16,16 +16,30 @@ const SectionCard = () => {
         console.log(err);
       });
   }, []);
+
   return (
     <div>
       <Container>
         <Row>
-          {section.map((section) => {
+        {section.slice(17).map((section) => {
             return (
               <>
                 <Col xs={4} md={3} style={{padding: "0.5rem"}}>
                 <a href={"/section"+section.id} style={{textDecoration: "none", color: "inherit"}}>
-                  <Card style={{height: "15vh", padding: "0.5rem", color: "white", backgroundColor: "black"}}>
+                  <Card style={{height: "20vh", padding: "0.5rem", color: "white", backgroundColor: "#2f3635"}}>
+                    <Card.Body><h3 style={{position: "relative", top: "25%", textAlign: "center"}}>Overall Energy</h3></Card.Body>
+                  </Card>
+                  </a>
+                </Col>
+              </>
+            );
+          })}
+          {section.slice(0,17).map((section) => {
+            return (
+              <>
+                <Col xs={4} md={3} style={{padding: "0.5rem"}}>
+                <a href={"/section"+section.id} style={{textDecoration: "none", color: "inherit"}}>
+                  <Card style={{height: "20vh", padding: "0.5rem", color: "white", backgroundColor: "#2f3635"}}>
                     <Card.Title >Section: {section.id}</Card.Title>
                     <Card.Body>Section infomation: {section.name}</Card.Body>
                   </Card>

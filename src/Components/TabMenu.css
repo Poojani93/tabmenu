@@ -22,7 +22,8 @@ input {
 }
 
 .nav-tabs>.nav-item>.nav-link {
-    color: #888888;
+    color: white;
+    font-weight: bold;
     margin: 0;
     margin-right: 5px;
     background-color: transparent;
@@ -38,9 +39,9 @@ input {
 }
 
 .nav-tabs>.nav-item>.nav-link.active {
-    background-color: #444;
+    background-color: white;
     border-radius: 30px;
-    color: #FFFFFF;
+    color: black;
 }
 
 .nav-tabs>.nav-item>.nav-link i.now-ui-icons {
